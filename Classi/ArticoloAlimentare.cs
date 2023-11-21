@@ -12,10 +12,10 @@ namespace Classi
         protected int _annoScadenza;
 
         //metodi accessor
-        static int AnnoScadenza
+        public int AnnoScadenza
         {
-            get { return AnnoScadenza; }
-            set { AnnoScadenza = value; }
+            get { return _annoScadenza; }
+            set { _annoScadenza = value; }
         }
 
         //costruttore

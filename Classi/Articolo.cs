@@ -16,18 +16,18 @@ namespace Classi
         //metodi accessor
         public int Codice
         {
-            get { return Codice; }
-            set { Codice = value; }
+            get { return _codice; }
+            set { _codice = value; }
         }
         public string Descrizione
         {
-            get { return Descrizione; }
-            set { Descrizione = value; }
+            get { return _descrizione; }
+            set { _descrizione = value; }
         }
         public double PrezzoUnitario
         {
-            get { return PrezzoUnitario; }
-            set { PrezzoUnitario = value; }
+            get { return _prezzoUnitario; }
+            set { _prezzoUnitario = value; }
         }
 
         //costruttore
