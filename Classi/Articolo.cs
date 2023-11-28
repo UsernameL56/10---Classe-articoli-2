@@ -12,6 +12,7 @@ namespace Classi
         protected int _codice;
         protected string _descrizione;
         protected double _prezzoUnitario;
+        protected bool _cartaFedelta;
 
         //metodi accessor
         public int Codice
@@ -29,20 +30,26 @@ namespace Classi
             get { return _prezzoUnitario; }
             set { _prezzoUnitario = value; }
         }
+        public bool CartaFedelta
+        {
+            get { return _cartaFedelta; }
+            set { _cartaFedelta = value;}
+        }
 
         //costruttore
-        public Articolo(int _codice, string _descrizione, double _prezzoUnitario)
+        public Articolo(int _codice, string _descrizione, double _prezzoUnitario, bool _cartaFedelta)
         {
             Codice = _codice;
             Descrizione = _descrizione;
             PrezzoUnitario = _prezzoUnitario;
+            CartaFedelta = _cartaFedelta;
         }
 
         //metodi
-        public virtual void Sconta(bool cartaFedelta)
+        public virtual void Sconta()
         {
             double sconto;
-            if (cartaFedelta)
+            if (CartaFedelta)
             {
                 sconto = (PrezzoUnitario * 5) / 100;
                 PrezzoUnitario -= sconto;

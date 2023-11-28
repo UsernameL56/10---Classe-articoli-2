@@ -33,16 +33,16 @@ namespace _10___Classe_articoli_2
             {
                 if (checkBoxAlimentareFresco.Checked)
                 {
-                    array[indice] = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
+                    array[indice] = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
                 }
                 else
                 {
-                    array[indice] = new ArticoloAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), int.Parse(annoScadenza.Text));
+                    array[indice] = new ArticoloAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text));
                 }
                 indice++;
             }else if (checkBoxNonAlimentare.Checked)
             {
-                array[indice] = new ArticoloNonAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), materiale.Text, riciclabile.Checked);
+                array[indice] = new ArticoloNonAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, materiale.Text, riciclabile.Checked);
                 indice++;
             }
             else
@@ -54,21 +54,33 @@ namespace _10___Classe_articoli_2
         private void Visualizzazione_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            foreach (Articolo articolo in array)
+            if(array != null)
             {
-                listView1.Items.Add(articolo.ToString());
+                foreach (var articolo in array)
+                {
+                    if(articolo != null)
+                        listView1.Items.Add(articolo.ToString());
+                }
             }
+            
         }
 
         private void Sconto_Click(object sender, EventArgs e)
         {
-            foreach (Articolo articolo in array)
+            listView1.Items.Clear();
+            if (array != null)
             {
-                MessageBox.Show($"Prezzo iniziale:{articolo.PrezzoUnitario}\n");
-                articolo.Sconta(cartaFedelta.Checked);
-                MessageBox.Show($"Prezzo scontato:{articolo.PrezzoUnitario}\n");
-
+                foreach (var articolo in array)
+                {
+                    if (articolo != null)
+                    {
+                        articolo.Sconta();
+                        listView1.Items.Add(articolo.ToString());
+                    }
+                        
+                }
             }
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Classi
         // metodi accessor
         public string Materiale
         {
-            get { return Materiale; }
+            get { return _materiale; }
             set { _materiale = value; }
         }
         public bool Riciclabile
@@ -24,17 +24,17 @@ namespace Classi
         }
 
         // costruttore
-        public ArticoloNonAlimentare(int _codice, string _descrizione, double _prezzoUnitario, string _materiale, bool _riciclabile) :base(_codice, _descrizione, _prezzoUnitario)
+        public ArticoloNonAlimentare(int _codice, string _descrizione, double _prezzoUnitario, bool _cartaFedelta, string _materiale, bool _riciclabile) :base(_codice, _descrizione, _prezzoUnitario, _cartaFedelta)
         {
             Materiale = _materiale;
             Riciclabile = _riciclabile;
         }
 
         // metodi
-        public override void Sconta(bool cartaFedelta)
+        public override void Sconta()
         {
             double sconto;
-            base.Sconta(cartaFedelta);
+            base.Sconta();
             if(Riciclabile) 
             {
                 sconto = (PrezzoUnitario * 10) / 100;

@@ -19,15 +19,15 @@ namespace Classi
         }
 
         // costruttore
-        public ArticoloFresco(int _codice, string _descrizione, double _prezzoUnitario, int _annoScadenza, int _giornoConsumo) : base(_codice, _descrizione, _prezzoUnitario, _annoScadenza)
+        public ArticoloFresco(int _codice, string _descrizione, double _prezzoUnitario, bool _cartaFedelta, int _annoScadenza, int _giornoConsumo) : base(_codice, _descrizione, _prezzoUnitario, _cartaFedelta, _annoScadenza)
         {
             GiornoConsumo = _giornoConsumo;
         }
 
         // metodi
-        public override void Sconta(bool cartaFedelta)
+        public override void Sconta()
         {
-            base.Sconta(cartaFedelta);
+            base.Sconta();
             double sconto = 10;
             for(int i = 0; i < 5 && i <_giornoConsumo; i++)
             {

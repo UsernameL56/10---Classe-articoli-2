@@ -19,16 +19,16 @@ namespace Classi
         }
 
         //costruttore
-        public ArticoloAlimentare(int _codice, string _descrizione, double _prezzoUnitario, int _annoScadenza) : base(_codice, _descrizione, _prezzoUnitario)
+        public ArticoloAlimentare(int _codice, string _descrizione, double _prezzoUnitario, bool _cartaFedelta, int _annoScadenza) : base(_codice, _descrizione, _prezzoUnitario, _cartaFedelta)
         {
             AnnoScadenza = _annoScadenza;
         }
 
         //metodi
-        public override void Sconta(bool cartaFedelta)
+        public override void Sconta()
         {
             double sconto;
-            base.Sconta(cartaFedelta);
+            base.Sconta();
 
             if (AnnoScadenza == DateTime.Now.Year)
             {
