@@ -13,12 +13,8 @@ namespace _10___Classe_articoli_2
 {
     public partial class Form1 : Form
     {
-        private Articolo[] array;
-        int _codice;
-        string _descrizione;
-        double _prezzoUnitario;
-        bool _cartaFedelta;
-        private int indice;
+        Articolo[] array;
+        int indice;
         public Form1()
         {
             InitializeComponent();
@@ -33,10 +29,47 @@ namespace _10___Classe_articoli_2
 
         private void Aggiunta_Click(object sender, EventArgs e)
         {
-            _codice = int.Parse(codice.Text);
-            _descrizione = descrizione.Text;
-            _prezzoUnitario = int.Parse(prezzo.Text);
-            _cartaFedelta = cartaFedelta.Checked;
+            if (checkBoxAlimentare.Checked)
+            {
+                if (checkBoxAlimentareFresco.Checked)
+                {
+                    array[indice] = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
+                }
+                else
+                {
+                    array[indice] = new ArticoloAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), int.Parse(annoScadenza.Text));
+                }
+                indice++;
+            }else if (checkBoxNonAlimentare.Checked)
+            {
+                array[indice] = new ArticoloNonAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), materiale.Text, riciclabile.Checked);
+                indice++;
+            }
+            else
+            {
+                MessageBox.Show("Selezionare una categoria.");
+            }
+        }
+
+        private void Visualizzazione_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            foreach (Articolo articolo in array)
+            {
+                string stringa = articolo.ToString();
+                listView1.Items.Add(stringa);
+            }
+        }
+
+        private void Sconto_Click(object sender, EventArgs e)
+        {
+            foreach (Articolo articolo in array)
+            {
+                MessageBox.Show($"Prezzo iniziale:{articolo.PrezzoUnitario}\n");
+                articolo.Sconta(cartaFedelta.Checked);
+                MessageBox.Show($"Prezzo scontato:{articolo.PrezzoUnitario}\n");
+
+            }
         }
     }
 }

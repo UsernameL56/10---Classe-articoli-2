@@ -36,5 +36,9 @@ namespace Classi
             sconto = (PrezzoUnitario * sconto) / 100;
             PrezzoUnitario -= sconto;
         }
+        public override string ToString()
+        {
+            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Anno di scadenza: {AnnoScadenza}, Giorni consumo: {GiornoConsumo}";
+        }
     }
 }

@@ -37,14 +37,20 @@
             this.Aggiunta = new System.Windows.Forms.Button();
             this.cartaFedelta = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.annoScadenza = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.giorniConsumo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.materiale = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.riciclabile = new System.Windows.Forms.CheckBox();
+            this.Visualizzazione = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.checkBoxAlimentare = new System.Windows.Forms.CheckBox();
+            this.checkBoxNonAlimentare = new System.Windows.Forms.CheckBox();
+            this.checkBoxAlimentareFresco = new System.Windows.Forms.CheckBox();
+            this.Sconto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // codice
@@ -127,30 +133,30 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Carta fedeltà";
             // 
-            // textBox1
+            // annoScadenza
             // 
-            this.textBox1.Location = new System.Drawing.Point(707, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 35);
-            this.textBox1.TabIndex = 9;
+            this.annoScadenza.Location = new System.Drawing.Point(707, 50);
+            this.annoScadenza.Multiline = true;
+            this.annoScadenza.Name = "annoScadenza";
+            this.annoScadenza.Size = new System.Drawing.Size(132, 35);
+            this.annoScadenza.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(704, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Data scadenza";
+            this.label7.Text = "Anno scadenza";
             // 
-            // textBox2
+            // giorniConsumo
             // 
-            this.textBox2.Location = new System.Drawing.Point(902, 53);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 35);
-            this.textBox2.TabIndex = 11;
+            this.giorniConsumo.Location = new System.Drawing.Point(902, 53);
+            this.giorniConsumo.Multiline = true;
+            this.giorniConsumo.Name = "giorniConsumo";
+            this.giorniConsumo.Size = new System.Drawing.Size(132, 35);
+            this.giorniConsumo.TabIndex = 11;
             // 
             // label8
             // 
@@ -161,13 +167,13 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Giorni Consumo";
             // 
-            // textBox3
+            // materiale
             // 
-            this.textBox3.Location = new System.Drawing.Point(1067, 53);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 35);
-            this.textBox3.TabIndex = 13;
+            this.materiale.Location = new System.Drawing.Point(1067, 53);
+            this.materiale.Multiline = true;
+            this.materiale.Name = "materiale";
+            this.materiale.Size = new System.Drawing.Size(132, 35);
+            this.materiale.TabIndex = 13;
             // 
             // label5
             // 
@@ -197,19 +203,85 @@
             this.riciclabile.Text = "Si o No";
             this.riciclabile.UseVisualStyleBackColor = true;
             // 
+            // Visualizzazione
+            // 
+            this.Visualizzazione.Location = new System.Drawing.Point(189, 233);
+            this.Visualizzazione.Name = "Visualizzazione";
+            this.Visualizzazione.Size = new System.Drawing.Size(107, 43);
+            this.Visualizzazione.TabIndex = 18;
+            this.Visualizzazione.Text = "Visualizza";
+            this.Visualizzazione.UseVisualStyleBackColor = true;
+            this.Visualizzazione.Click += new System.EventHandler(this.Visualizzazione_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(538, 233);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(799, 285);
+            this.listView1.TabIndex = 19;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
+            // 
+            // checkBoxAlimentare
+            // 
+            this.checkBoxAlimentare.AutoSize = true;
+            this.checkBoxAlimentare.Location = new System.Drawing.Point(1321, 37);
+            this.checkBoxAlimentare.Name = "checkBoxAlimentare";
+            this.checkBoxAlimentare.Size = new System.Drawing.Size(75, 17);
+            this.checkBoxAlimentare.TabIndex = 20;
+            this.checkBoxAlimentare.Text = "Alimentare";
+            this.checkBoxAlimentare.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNonAlimentare
+            // 
+            this.checkBoxNonAlimentare.AutoSize = true;
+            this.checkBoxNonAlimentare.Location = new System.Drawing.Point(1321, 60);
+            this.checkBoxNonAlimentare.Name = "checkBoxNonAlimentare";
+            this.checkBoxNonAlimentare.Size = new System.Drawing.Size(98, 17);
+            this.checkBoxNonAlimentare.TabIndex = 21;
+            this.checkBoxNonAlimentare.Text = "Non Alimentare";
+            this.checkBoxNonAlimentare.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAlimentareFresco
+            // 
+            this.checkBoxAlimentareFresco.AutoSize = true;
+            this.checkBoxAlimentareFresco.Location = new System.Drawing.Point(1321, 83);
+            this.checkBoxAlimentareFresco.Name = "checkBoxAlimentareFresco";
+            this.checkBoxAlimentareFresco.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxAlimentareFresco.TabIndex = 22;
+            this.checkBoxAlimentareFresco.Text = "Alimentare fresco";
+            this.checkBoxAlimentareFresco.UseVisualStyleBackColor = true;
+            // 
+            // Sconto
+            // 
+            this.Sconto.Location = new System.Drawing.Point(324, 233);
+            this.Sconto.Name = "Sconto";
+            this.Sconto.Size = new System.Drawing.Size(107, 43);
+            this.Sconto.TabIndex = 23;
+            this.Sconto.Text = "Sconta";
+            this.Sconto.UseVisualStyleBackColor = true;
+            this.Sconto.Click += new System.EventHandler(this.Sconto_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1487, 649);
+            this.ClientSize = new System.Drawing.Size(1443, 621);
+            this.Controls.Add(this.Sconto);
+            this.Controls.Add(this.checkBoxAlimentareFresco);
+            this.Controls.Add(this.checkBoxNonAlimentare);
+            this.Controls.Add(this.checkBoxAlimentare);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.Visualizzazione);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.riciclabile);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.materiale);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.giorniConsumo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.annoScadenza);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cartaFedelta);
             this.Controls.Add(this.Aggiunta);
@@ -238,14 +310,20 @@
         private System.Windows.Forms.Button Aggiunta;
         private System.Windows.Forms.CheckBox cartaFedelta;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox annoScadenza;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox giorniConsumo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox materiale;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox riciclabile;
+        private System.Windows.Forms.Button Visualizzazione;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.CheckBox checkBoxAlimentare;
+        private System.Windows.Forms.CheckBox checkBoxNonAlimentare;
+        private System.Windows.Forms.CheckBox checkBoxAlimentareFresco;
+        private System.Windows.Forms.Button Sconto;
     }
 }
 

@@ -48,5 +48,19 @@ namespace Classi
                 PrezzoUnitario -= sconto;
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            if(obj == null || GetType() != obj.GetType()) 
+                return false;
+
+            Articolo articolo2 = (Articolo)obj;
+            return Codice == articolo2.Codice;
+        }
+
+        public override string ToString()
+        {
+            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}";
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace Classi
         public string Materiale
         {
             get { return Materiale; }
-            set { Materiale = value; }
+            set { _materiale = value; }
         }
         public bool Riciclabile
         {
@@ -40,6 +40,10 @@ namespace Classi
                 sconto = (PrezzoUnitario * 10) / 100;
                 PrezzoUnitario -= sconto;
             }
+        }
+        public override string ToString()
+        {
+            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Materiale: {Materiale}, Riciclabile: {Riciclabile}";
         }
 
     }
