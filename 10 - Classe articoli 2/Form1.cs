@@ -56,8 +56,7 @@ namespace _10___Classe_articoli_2
             listView1.Items.Clear();
             foreach (Articolo articolo in array)
             {
-                string stringa = articolo.ToString();
-                listView1.Items.Add(stringa);
+                listView1.Items.Add(articolo.ToString());
             }
         }
 

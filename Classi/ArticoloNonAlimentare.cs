@@ -41,6 +41,14 @@ namespace Classi
                 PrezzoUnitario -= sconto;
             }
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            ArticoloNonAlimentare articolo2 = (ArticoloNonAlimentare)obj;
+            return Materiale == articolo2.Materiale;
+        }
         public override string ToString()
         {
             return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Materiale: {Materiale}, Riciclabile: {Riciclabile}";

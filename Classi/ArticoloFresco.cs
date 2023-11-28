@@ -36,6 +36,14 @@ namespace Classi
             sconto = (PrezzoUnitario * sconto) / 100;
             PrezzoUnitario -= sconto;
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            ArticoloFresco articolo2 = (ArticoloFresco)obj;
+            return GiornoConsumo == articolo2.GiornoConsumo;
+        }
         public override string ToString()
         {
             return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Anno di scadenza: {AnnoScadenza}, Giorni consumo: {GiornoConsumo}";
