@@ -33,7 +33,11 @@ namespace _10___Classe_articoli_2
             {
                 if (checkBoxAlimentareFresco.Checked)
                 {
-                    array[indice] = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
+                    if(string.IsNullOrEmpty(codice.Text) || string.IsNullOrEmpty(descrizione.Text) || string.IsNullOrEmpty(prezzo.Text) || string.IsNullOrEmpty(annoScadenza.Text) || string.IsNullOrEmpty(giorniConsumo.Text))
+                    {
+                        MessageBox.Show("Sono presenti dei campi mancati; Inseire dati nei seguenti campi: Codice, Descrizione, Prezzo, Anno di Scadenza, Giorni Consumo");
+                    }else
+                        array[indice] = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
                 }
                 else
                 {
@@ -44,8 +48,10 @@ namespace _10___Classe_articoli_2
             {
                 array[indice] = new ArticoloNonAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, materiale.Text, riciclabile.Checked);
                 indice++;
-            }
-            else
+            }else if(checkBoxAlimentareFresco.Checked && !checkBoxAlimentare.Checked) 
+            {
+                MessageBox.Show("Selezionare pure la categoria alimentare");
+            }else
             {
                 MessageBox.Show("Selezionare una categoria.");
             }
@@ -62,7 +68,6 @@ namespace _10___Classe_articoli_2
                         listView1.Items.Add(articolo.ToString());
                 }
             }
-            
         }
 
         private void Sconto_Click(object sender, EventArgs e)
@@ -76,11 +81,9 @@ namespace _10___Classe_articoli_2
                     {
                         articolo.Sconta();
                         listView1.Items.Add(articolo.ToString());
-                    }
-                        
+                    }           
                 }
             }
-
         }
     }
 }

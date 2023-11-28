@@ -67,7 +67,7 @@ namespace Classi
 
         public override string ToString()
         {
-            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}";
+            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Carta fedelta: {CartaFedelta}";
         }
     }
 }

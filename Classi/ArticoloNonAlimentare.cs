@@ -51,7 +51,7 @@ namespace Classi
         }
         public override string ToString()
         {
-            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Materiale: {Materiale}, Riciclabile: {Riciclabile}";
+            return $"Codice: {Codice}, Descrizione: {Descrizione}, Prezzo Unitario: {PrezzoUnitario}, Carta fedelta: {CartaFedelta}, Materiale: {Materiale}, Riciclabile: {Riciclabile}";
         }
 
     }
