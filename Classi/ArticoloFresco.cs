@@ -15,7 +15,11 @@ namespace Classi
         public int GiornoConsumo
         {
             get { return _giornoConsumo; }
-            set { _giornoConsumo = value; }
+            set 
+            {
+                if(_giornoConsumo>0 && _giornoConsumo <=5)
+                    _giornoConsumo = value; 
+            }
         }
 
         // costruttore
@@ -25,9 +29,9 @@ namespace Classi
         }
 
         // metodi
-        public override void Sconta()
+        public override void Sconta(bool _cartaFedelta)
         {
-            base.Sconta();
+            base.Sconta(_cartaFedelta);
             double sconto = 10;
             for(int i = 0; i < 5 && i <_giornoConsumo; i++)
             {

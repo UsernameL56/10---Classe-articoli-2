@@ -31,10 +31,10 @@ namespace Classi
         }
 
         // metodi
-        public override void Sconta()
+        public override void Sconta(bool _cartaFedelta)
         {
             double sconto;
-            base.Sconta();
+            base.Sconta(_cartaFedelta);
             if(Riciclabile) 
             {
                 sconto = (PrezzoUnitario * 10) / 100;

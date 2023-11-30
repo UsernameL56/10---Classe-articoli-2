@@ -25,10 +25,10 @@ namespace Classi
         }
 
         //metodi
-        public override void Sconta()
+        public override void Sconta(bool _cartaFedelta)
         {
             double sconto;
-            base.Sconta();
+            base.Sconta(_cartaFedelta);
 
             if (AnnoScadenza == DateTime.Now.Year)
             {

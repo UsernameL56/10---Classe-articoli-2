@@ -46,10 +46,10 @@ namespace Classi
         }
 
         //metodi
-        public virtual void Sconta()
+        public virtual void Sconta(bool _cartaFedelta)
         {
             double sconto;
-            if (CartaFedelta)
+            if (_cartaFedelta)
             {
                 sconto = (PrezzoUnitario * 5) / 100;
                 PrezzoUnitario -= sconto;

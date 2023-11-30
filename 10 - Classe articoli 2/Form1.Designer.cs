@@ -51,6 +51,9 @@
             this.checkBoxNonAlimentare = new System.Windows.Forms.CheckBox();
             this.checkBoxAlimentareFresco = new System.Windows.Forms.CheckBox();
             this.Sconto = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // codice
@@ -117,7 +120,7 @@
             // cartaFedelta
             // 
             this.cartaFedelta.AutoSize = true;
-            this.cartaFedelta.Location = new System.Drawing.Point(575, 71);
+            this.cartaFedelta.Location = new System.Drawing.Point(547, 204);
             this.cartaFedelta.Name = "cartaFedelta";
             this.cartaFedelta.Size = new System.Drawing.Size(61, 17);
             this.cartaFedelta.TabIndex = 7;
@@ -127,7 +130,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(572, 34);
+            this.label4.Location = new System.Drawing.Point(544, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 8;
@@ -135,7 +138,7 @@
             // 
             // annoScadenza
             // 
-            this.annoScadenza.Location = new System.Drawing.Point(707, 50);
+            this.annoScadenza.Location = new System.Drawing.Point(547, 53);
             this.annoScadenza.Multiline = true;
             this.annoScadenza.Name = "annoScadenza";
             this.annoScadenza.Size = new System.Drawing.Size(132, 35);
@@ -144,7 +147,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(704, 34);
+            this.label7.Location = new System.Drawing.Point(544, 37);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 10;
@@ -152,7 +155,7 @@
             // 
             // giorniConsumo
             // 
-            this.giorniConsumo.Location = new System.Drawing.Point(902, 53);
+            this.giorniConsumo.Location = new System.Drawing.Point(742, 56);
             this.giorniConsumo.Multiline = true;
             this.giorniConsumo.Name = "giorniConsumo";
             this.giorniConsumo.Size = new System.Drawing.Size(132, 35);
@@ -161,7 +164,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(899, 34);
+            this.label8.Location = new System.Drawing.Point(739, 37);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 12;
@@ -169,7 +172,7 @@
             // 
             // materiale
             // 
-            this.materiale.Location = new System.Drawing.Point(1067, 53);
+            this.materiale.Location = new System.Drawing.Point(907, 56);
             this.materiale.Multiline = true;
             this.materiale.Name = "materiale";
             this.materiale.Size = new System.Drawing.Size(132, 35);
@@ -178,7 +181,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1064, 34);
+            this.label5.Location = new System.Drawing.Point(904, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 15;
@@ -187,7 +190,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1229, 34);
+            this.label6.Location = new System.Drawing.Point(1069, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 17;
@@ -196,7 +199,7 @@
             // riciclabile
             // 
             this.riciclabile.AutoSize = true;
-            this.riciclabile.Location = new System.Drawing.Point(1232, 71);
+            this.riciclabile.Location = new System.Drawing.Point(1072, 74);
             this.riciclabile.Name = "riciclabile";
             this.riciclabile.Size = new System.Drawing.Size(61, 17);
             this.riciclabile.TabIndex = 16;
@@ -226,7 +229,7 @@
             // checkBoxAlimentare
             // 
             this.checkBoxAlimentare.AutoSize = true;
-            this.checkBoxAlimentare.Location = new System.Drawing.Point(1321, 37);
+            this.checkBoxAlimentare.Location = new System.Drawing.Point(1178, 37);
             this.checkBoxAlimentare.Name = "checkBoxAlimentare";
             this.checkBoxAlimentare.Size = new System.Drawing.Size(75, 17);
             this.checkBoxAlimentare.TabIndex = 20;
@@ -236,7 +239,7 @@
             // checkBoxNonAlimentare
             // 
             this.checkBoxNonAlimentare.AutoSize = true;
-            this.checkBoxNonAlimentare.Location = new System.Drawing.Point(1321, 60);
+            this.checkBoxNonAlimentare.Location = new System.Drawing.Point(1178, 60);
             this.checkBoxNonAlimentare.Name = "checkBoxNonAlimentare";
             this.checkBoxNonAlimentare.Size = new System.Drawing.Size(98, 17);
             this.checkBoxNonAlimentare.TabIndex = 21;
@@ -246,7 +249,7 @@
             // checkBoxAlimentareFresco
             // 
             this.checkBoxAlimentareFresco.AutoSize = true;
-            this.checkBoxAlimentareFresco.Location = new System.Drawing.Point(1321, 83);
+            this.checkBoxAlimentareFresco.Location = new System.Drawing.Point(1178, 83);
             this.checkBoxAlimentareFresco.Name = "checkBoxAlimentareFresco";
             this.checkBoxAlimentareFresco.Size = new System.Drawing.Size(107, 17);
             this.checkBoxAlimentareFresco.TabIndex = 22;
@@ -263,11 +266,41 @@
             this.Sconto.UseVisualStyleBackColor = true;
             this.Sconto.Click += new System.EventHandler(this.Sconto_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(748, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Alimentare Fresco";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(904, 94);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "NonAlimentare";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1069, 94);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 13);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "NonAlimentare";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 621);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.Sconto);
             this.Controls.Add(this.checkBoxAlimentareFresco);
             this.Controls.Add(this.checkBoxNonAlimentare);
@@ -324,6 +357,9 @@
         private System.Windows.Forms.CheckBox checkBoxNonAlimentare;
         private System.Windows.Forms.CheckBox checkBoxAlimentareFresco;
         private System.Windows.Forms.Button Sconto;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 
