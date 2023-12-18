@@ -37,6 +37,13 @@ namespace Classi
         }
 
         //costruttore
+        public Articolo()
+        {
+            Codice += 1;
+            Descrizione = string.Empty;
+            PrezzoUnitario = 0;
+            CartaFedelta = false;
+        }
         public Articolo(int _codice, string _descrizione, double _prezzoUnitario, bool _cartaFedelta)
         {
             Codice = _codice;
@@ -46,14 +53,13 @@ namespace Classi
         }
 
         //metodi
-        public virtual void Sconta(bool _cartaFedelta)
+        public virtual double Sconta(bool _cartaFedelta)
         {
-            double sconto;
             if (_cartaFedelta)
             {
-                sconto = (PrezzoUnitario * 5) / 100;
-                PrezzoUnitario -= sconto;
+                return PrezzoUnitario - ((PrezzoUnitario * 5) / 100);
             }
+            return PrezzoUnitario;
         }
 
         public override bool Equals(object obj)

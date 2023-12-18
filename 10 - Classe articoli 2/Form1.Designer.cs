@@ -58,60 +58,67 @@
             // 
             // codice
             // 
-            this.codice.Location = new System.Drawing.Point(49, 53);
+            this.codice.Location = new System.Drawing.Point(65, 65);
+            this.codice.Margin = new System.Windows.Forms.Padding(4);
             this.codice.Multiline = true;
             this.codice.Name = "codice";
-            this.codice.Size = new System.Drawing.Size(132, 35);
+            this.codice.Size = new System.Drawing.Size(175, 42);
             this.codice.TabIndex = 0;
             // 
             // descrizione
             // 
-            this.descrizione.Location = new System.Drawing.Point(227, 53);
+            this.descrizione.Location = new System.Drawing.Point(303, 65);
+            this.descrizione.Margin = new System.Windows.Forms.Padding(4);
             this.descrizione.Multiline = true;
             this.descrizione.Name = "descrizione";
-            this.descrizione.Size = new System.Drawing.Size(132, 35);
+            this.descrizione.Size = new System.Drawing.Size(175, 42);
             this.descrizione.TabIndex = 1;
             // 
             // prezzo
             // 
-            this.prezzo.Location = new System.Drawing.Point(395, 53);
+            this.prezzo.Location = new System.Drawing.Point(527, 65);
+            this.prezzo.Margin = new System.Windows.Forms.Padding(4);
             this.prezzo.Multiline = true;
             this.prezzo.Name = "prezzo";
-            this.prezzo.Size = new System.Drawing.Size(132, 35);
+            this.prezzo.Size = new System.Drawing.Size(175, 42);
             this.prezzo.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 37);
+            this.label1.Location = new System.Drawing.Point(299, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Descrizione";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 37);
+            this.label2.Location = new System.Drawing.Point(61, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Codice";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(392, 34);
+            this.label3.Location = new System.Drawing.Point(523, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Prezzo";
             // 
             // Aggiunta
             // 
-            this.Aggiunta.Location = new System.Drawing.Point(49, 233);
+            this.Aggiunta.Location = new System.Drawing.Point(65, 287);
+            this.Aggiunta.Margin = new System.Windows.Forms.Padding(4);
             this.Aggiunta.Name = "Aggiunta";
-            this.Aggiunta.Size = new System.Drawing.Size(107, 43);
+            this.Aggiunta.Size = new System.Drawing.Size(143, 53);
             this.Aggiunta.TabIndex = 6;
             this.Aggiunta.Text = "Aggiungi";
             this.Aggiunta.UseVisualStyleBackColor = true;
@@ -120,9 +127,10 @@
             // cartaFedelta
             // 
             this.cartaFedelta.AutoSize = true;
-            this.cartaFedelta.Location = new System.Drawing.Point(547, 204);
+            this.cartaFedelta.Location = new System.Drawing.Point(729, 251);
+            this.cartaFedelta.Margin = new System.Windows.Forms.Padding(4);
             this.cartaFedelta.Name = "cartaFedelta";
-            this.cartaFedelta.Size = new System.Drawing.Size(61, 17);
+            this.cartaFedelta.Size = new System.Drawing.Size(73, 20);
             this.cartaFedelta.TabIndex = 7;
             this.cartaFedelta.Text = "Si o No";
             this.cartaFedelta.UseVisualStyleBackColor = true;
@@ -130,87 +138,97 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(544, 167);
+            this.label4.Location = new System.Drawing.Point(725, 206);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Carta fedeltà";
             // 
             // annoScadenza
             // 
-            this.annoScadenza.Location = new System.Drawing.Point(547, 53);
+            this.annoScadenza.Location = new System.Drawing.Point(729, 65);
+            this.annoScadenza.Margin = new System.Windows.Forms.Padding(4);
             this.annoScadenza.Multiline = true;
             this.annoScadenza.Name = "annoScadenza";
-            this.annoScadenza.Size = new System.Drawing.Size(132, 35);
+            this.annoScadenza.Size = new System.Drawing.Size(175, 42);
             this.annoScadenza.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(544, 37);
+            this.label7.Location = new System.Drawing.Point(725, 46);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 13);
+            this.label7.Size = new System.Drawing.Size(100, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Anno scadenza";
             // 
             // giorniConsumo
             // 
-            this.giorniConsumo.Location = new System.Drawing.Point(742, 56);
+            this.giorniConsumo.Location = new System.Drawing.Point(989, 69);
+            this.giorniConsumo.Margin = new System.Windows.Forms.Padding(4);
             this.giorniConsumo.Multiline = true;
             this.giorniConsumo.Name = "giorniConsumo";
-            this.giorniConsumo.Size = new System.Drawing.Size(132, 35);
+            this.giorniConsumo.Size = new System.Drawing.Size(175, 42);
             this.giorniConsumo.TabIndex = 11;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(739, 37);
+            this.label8.Location = new System.Drawing.Point(985, 46);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.Size = new System.Drawing.Size(102, 16);
             this.label8.TabIndex = 12;
             this.label8.Text = "Giorni Consumo";
             // 
             // materiale
             // 
-            this.materiale.Location = new System.Drawing.Point(907, 56);
+            this.materiale.Location = new System.Drawing.Point(1209, 69);
+            this.materiale.Margin = new System.Windows.Forms.Padding(4);
             this.materiale.Multiline = true;
             this.materiale.Name = "materiale";
-            this.materiale.Size = new System.Drawing.Size(132, 35);
+            this.materiale.Size = new System.Drawing.Size(175, 42);
             this.materiale.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(904, 37);
+            this.label5.Location = new System.Drawing.Point(1205, 46);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "Materiale";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1069, 37);
+            this.label6.Location = new System.Drawing.Point(1425, 46);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(70, 16);
             this.label6.TabIndex = 17;
             this.label6.Text = "Riciclabile";
             // 
             // riciclabile
             // 
             this.riciclabile.AutoSize = true;
-            this.riciclabile.Location = new System.Drawing.Point(1072, 74);
+            this.riciclabile.Location = new System.Drawing.Point(1429, 91);
+            this.riciclabile.Margin = new System.Windows.Forms.Padding(4);
             this.riciclabile.Name = "riciclabile";
-            this.riciclabile.Size = new System.Drawing.Size(61, 17);
+            this.riciclabile.Size = new System.Drawing.Size(73, 20);
             this.riciclabile.TabIndex = 16;
             this.riciclabile.Text = "Si o No";
             this.riciclabile.UseVisualStyleBackColor = true;
             // 
             // Visualizzazione
             // 
-            this.Visualizzazione.Location = new System.Drawing.Point(189, 233);
+            this.Visualizzazione.Location = new System.Drawing.Point(252, 287);
+            this.Visualizzazione.Margin = new System.Windows.Forms.Padding(4);
             this.Visualizzazione.Name = "Visualizzazione";
-            this.Visualizzazione.Size = new System.Drawing.Size(107, 43);
+            this.Visualizzazione.Size = new System.Drawing.Size(143, 53);
             this.Visualizzazione.TabIndex = 18;
             this.Visualizzazione.Text = "Visualizza";
             this.Visualizzazione.UseVisualStyleBackColor = true;
@@ -219,9 +237,10 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(538, 233);
+            this.listView1.Location = new System.Drawing.Point(717, 287);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(799, 285);
+            this.listView1.Size = new System.Drawing.Size(1064, 350);
             this.listView1.TabIndex = 19;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -229,9 +248,10 @@
             // checkBoxAlimentare
             // 
             this.checkBoxAlimentare.AutoSize = true;
-            this.checkBoxAlimentare.Location = new System.Drawing.Point(1178, 37);
+            this.checkBoxAlimentare.Location = new System.Drawing.Point(1571, 46);
+            this.checkBoxAlimentare.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAlimentare.Name = "checkBoxAlimentare";
-            this.checkBoxAlimentare.Size = new System.Drawing.Size(75, 17);
+            this.checkBoxAlimentare.Size = new System.Drawing.Size(93, 20);
             this.checkBoxAlimentare.TabIndex = 20;
             this.checkBoxAlimentare.Text = "Alimentare";
             this.checkBoxAlimentare.UseVisualStyleBackColor = true;
@@ -239,9 +259,10 @@
             // checkBoxNonAlimentare
             // 
             this.checkBoxNonAlimentare.AutoSize = true;
-            this.checkBoxNonAlimentare.Location = new System.Drawing.Point(1178, 60);
+            this.checkBoxNonAlimentare.Location = new System.Drawing.Point(1571, 74);
+            this.checkBoxNonAlimentare.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxNonAlimentare.Name = "checkBoxNonAlimentare";
-            this.checkBoxNonAlimentare.Size = new System.Drawing.Size(98, 17);
+            this.checkBoxNonAlimentare.Size = new System.Drawing.Size(121, 20);
             this.checkBoxNonAlimentare.TabIndex = 21;
             this.checkBoxNonAlimentare.Text = "Non Alimentare";
             this.checkBoxNonAlimentare.UseVisualStyleBackColor = true;
@@ -249,18 +270,20 @@
             // checkBoxAlimentareFresco
             // 
             this.checkBoxAlimentareFresco.AutoSize = true;
-            this.checkBoxAlimentareFresco.Location = new System.Drawing.Point(1178, 83);
+            this.checkBoxAlimentareFresco.Location = new System.Drawing.Point(1571, 102);
+            this.checkBoxAlimentareFresco.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAlimentareFresco.Name = "checkBoxAlimentareFresco";
-            this.checkBoxAlimentareFresco.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxAlimentareFresco.Size = new System.Drawing.Size(133, 20);
             this.checkBoxAlimentareFresco.TabIndex = 22;
             this.checkBoxAlimentareFresco.Text = "Alimentare fresco";
             this.checkBoxAlimentareFresco.UseVisualStyleBackColor = true;
             // 
             // Sconto
             // 
-            this.Sconto.Location = new System.Drawing.Point(324, 233);
+            this.Sconto.Location = new System.Drawing.Point(432, 287);
+            this.Sconto.Margin = new System.Windows.Forms.Padding(4);
             this.Sconto.Name = "Sconto";
-            this.Sconto.Size = new System.Drawing.Size(107, 43);
+            this.Sconto.Size = new System.Drawing.Size(143, 53);
             this.Sconto.TabIndex = 23;
             this.Sconto.Text = "Sconta";
             this.Sconto.UseVisualStyleBackColor = true;
@@ -269,35 +292,38 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(748, 94);
+            this.label9.Location = new System.Drawing.Point(997, 116);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.Size = new System.Drawing.Size(116, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "Alimentare Fresco";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(904, 94);
+            this.label10.Location = new System.Drawing.Point(1205, 116);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.Size = new System.Drawing.Size(96, 16);
             this.label10.TabIndex = 25;
             this.label10.Text = "NonAlimentare";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1069, 94);
+            this.label11.Location = new System.Drawing.Point(1425, 116);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 13);
+            this.label11.Size = new System.Drawing.Size(96, 16);
             this.label11.TabIndex = 26;
             this.label11.Text = "NonAlimentare";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 621);
+            this.ClientSize = new System.Drawing.Size(1806, 764);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -324,6 +350,7 @@
             this.Controls.Add(this.prezzo);
             this.Controls.Add(this.descrizione);
             this.Controls.Add(this.codice);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

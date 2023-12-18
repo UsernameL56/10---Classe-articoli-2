@@ -29,16 +29,15 @@ namespace Classi
         }
 
         // metodi
-        public override void Sconta(bool _cartaFedelta)
+        public override double Sconta(bool _cartaFedelta)
         {
-            base.Sconta(_cartaFedelta);
+            double ScontoBase = base.Sconta(_cartaFedelta);
             double sconto = 10;
             for(int i = 0; i < 5 && i <_giornoConsumo; i++)
             {
                 sconto -= 2*i;
             }
-            sconto = (PrezzoUnitario * sconto) / 100;
-            PrezzoUnitario -= sconto;
+            return ScontoBase - ((ScontoBase * sconto) / 100);
         }
         public override bool Equals(object obj)
         {

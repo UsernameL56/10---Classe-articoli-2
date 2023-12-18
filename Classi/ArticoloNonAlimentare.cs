@@ -31,15 +31,14 @@ namespace Classi
         }
 
         // metodi
-        public override void Sconta(bool _cartaFedelta)
+        public override double Sconta(bool _cartaFedelta)
         {
-            double sconto;
-            base.Sconta(_cartaFedelta);
+            double ScontoBase = base.Sconta(_cartaFedelta);
             if(Riciclabile) 
             {
-                sconto = (PrezzoUnitario * 10) / 100;
-                PrezzoUnitario -= sconto;
+                return PrezzoUnitario - ((ScontoBase * 10) / 100);
             }
+            return ScontoBase;
         }
         public override bool Equals(object obj)
         {

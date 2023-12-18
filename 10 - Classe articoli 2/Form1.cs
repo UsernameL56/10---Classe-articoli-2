@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Classi;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _10___Classe_articoli_2
 {
     public partial class Form1 : Form
     {
-        Articolo[] array;
+        Articolo articolo;
+        Scontrino scontrino;
         int indice;
         public Form1()
         {
             InitializeComponent();
-            array = new Articolo[100];
+            articolo = new Articolo();
+            scontrino = new Scontrino();
             indice = 0;
         }
 
@@ -37,14 +40,14 @@ namespace _10___Classe_articoli_2
                     {
                         MessageBox.Show("Sono presenti dei campi mancati; Inseire dati nei seguenti campi: Codice, Descrizione, Prezzo, Anno di Scadenza, Giorni Consumo");
                     }else
-                        array[indice] = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
+                        articolo = new ArticoloFresco(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text), int.Parse(giorniConsumo.Text));
                 }
                 else
                 {
                     if (string.IsNullOrEmpty(codice.Text) || string.IsNullOrEmpty(descrizione.Text) || string.IsNullOrEmpty(prezzo.Text) || string.IsNullOrEmpty(annoScadenza.Text))
                         MessageBox.Show("Sono presenti dei campi mancati; Inseire dati nei seguenti campi: Codice, Descrizione, Prezzo, Anno di Scadenza");
                     else
-                        array[indice] = new ArticoloAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text));
+                        articolo = new ArticoloAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, int.Parse(annoScadenza.Text));
                 }
                 indice++;
             }else if (checkBoxNonAlimentare.Checked)
@@ -52,7 +55,7 @@ namespace _10___Classe_articoli_2
                 if (string.IsNullOrEmpty(codice.Text) || string.IsNullOrEmpty(descrizione.Text) || string.IsNullOrEmpty(prezzo.Text) || string.IsNullOrEmpty(materiale.Text))
                     MessageBox.Show("Sono presenti dei campi mancati; Inseire dati nei seguenti campi: Codice, Descrizione, Prezzo, Materiale");
                 else
-                    array[indice] = new ArticoloNonAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, materiale.Text, riciclabile.Checked);
+                    articolo = new ArticoloNonAlimentare(int.Parse(codice.Text), descrizione.Text, double.Parse(prezzo.Text), cartaFedelta.Checked, materiale.Text, riciclabile.Checked);
                 indice++;
             }else if(checkBoxAlimentareFresco.Checked && !checkBoxAlimentare.Checked) 
             {
@@ -61,35 +64,28 @@ namespace _10___Classe_articoli_2
             {
                 MessageBox.Show("Selezionare una categoria.");
             }
+
+            scontrino.Aggiunta(articolo);
         }
 
         private void Visualizzazione_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            if(array != null)
+            if(scontrino != null)
             {
-                foreach (var articolo in array)
+                string[] stringa = new string[100];
+                stringa = scontrino.Stringa();
+                listView1.Items.Add("Articoli: \n");
+                for(int i = 0; i < indice; i++)
                 {
-                    if(articolo != null)
-                        listView1.Items.Add(articolo.ToString());
+                    listView1.Items.Add(stringa[i] + "\n");
                 }
             }
         }
 
         private void Sconto_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            if (array != null)
-            {
-                foreach (var articolo in array)
-                {
-                    if (articolo != null)
-                    {
-                        articolo.Sconta(cartaFedelta.Checked);
-                        listView1.Items.Add(articolo.ToString());
-                    }           
-                }
-            }
+            listView1.Items.Add("Totale: " + scontrino.Totale(cartaFedelta.Checked));
         }
     }
 }

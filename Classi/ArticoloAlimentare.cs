@@ -25,16 +25,14 @@ namespace Classi
         }
 
         //metodi
-        public override void Sconta(bool _cartaFedelta)
+        public override double Sconta(bool _cartaFedelta)
         {
-            double sconto;
-            base.Sconta(_cartaFedelta);
-
+            double ScontoBase = base.Sconta(_cartaFedelta);
             if (AnnoScadenza == DateTime.Now.Year)
             {
-                sconto = (PrezzoUnitario * 20) / 100;
-                PrezzoUnitario -= sconto;
+                return PrezzoUnitario - ((ScontoBase * 20) / 100);
             }
+            return ScontoBase;
         }
         public override bool Equals(object obj)
         {
