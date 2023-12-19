@@ -66,17 +66,14 @@ namespace _10___Classe_articoli_2
             }
 
             scontrino.Aggiunta(articolo);
-        }
 
-        private void Visualizzazione_Click(object sender, EventArgs e)
-        {
             listView1.Items.Clear();
-            if(scontrino != null)
+            if (scontrino != null)
             {
                 string[] stringa = new string[100];
                 stringa = scontrino.Stringa();
                 listView1.Items.Add("Articoli: \n");
-                for(int i = 0; i < indice; i++)
+                for (int i = 0; i < indice; i++)
                 {
                     listView1.Items.Add(stringa[i] + "\n");
                 }
@@ -85,7 +82,44 @@ namespace _10___Classe_articoli_2
 
         private void Sconto_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+            if (scontrino != null)
+            {
+                string[] stringa = new string[100];
+                stringa = scontrino.Stringa();
+                listView1.Items.Add("Articoli: \n");
+                for (int i = 0; i < indice; i++)
+                {
+                    listView1.Items.Add(stringa[i] + "\n");
+                }
+            }
             listView1.Items.Add("Totale: " + scontrino.Totale(cartaFedelta.Checked));
+        }
+
+        private void ricerca_Click(object sender, EventArgs e)
+        {
+            if (scontrino.Ricerca(descrizione.Text) != -1)
+            {
+                MessageBox.Show("L'articolo è stato trovato alla riga: " + scontrino.Ricerca(descrizione.Text));
+            }
+            else
+                MessageBox.Show("L'articolo ricercato non è presente");
+        }
+
+        private void sort_Click(object sender, EventArgs e)
+        {
+            scontrino.BubbleSort();
+            listView1.Items.Clear();
+            if (scontrino != null)
+            {
+                string[] stringa = new string[100];
+                stringa = scontrino.Stringa();
+                listView1.Items.Add("Articoli: \n");
+                for (int i = 0; i < indice; i++)
+                {
+                    listView1.Items.Add(stringa[i] + "\n");
+                }
+            }
         }
     }
 }

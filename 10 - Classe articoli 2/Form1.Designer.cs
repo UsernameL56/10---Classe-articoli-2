@@ -45,7 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.riciclabile = new System.Windows.Forms.CheckBox();
-            this.Visualizzazione = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.checkBoxAlimentare = new System.Windows.Forms.CheckBox();
             this.checkBoxNonAlimentare = new System.Windows.Forms.CheckBox();
@@ -54,6 +53,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.ricerca = new System.Windows.Forms.Button();
+            this.sort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // codice
@@ -115,7 +116,7 @@
             // 
             // Aggiunta
             // 
-            this.Aggiunta.Location = new System.Drawing.Point(65, 287);
+            this.Aggiunta.Location = new System.Drawing.Point(13, 316);
             this.Aggiunta.Margin = new System.Windows.Forms.Padding(4);
             this.Aggiunta.Name = "Aggiunta";
             this.Aggiunta.Size = new System.Drawing.Size(143, 53);
@@ -127,7 +128,7 @@
             // cartaFedelta
             // 
             this.cartaFedelta.AutoSize = true;
-            this.cartaFedelta.Location = new System.Drawing.Point(729, 251);
+            this.cartaFedelta.Location = new System.Drawing.Point(539, 226);
             this.cartaFedelta.Margin = new System.Windows.Forms.Padding(4);
             this.cartaFedelta.Name = "cartaFedelta";
             this.cartaFedelta.Size = new System.Drawing.Size(73, 20);
@@ -138,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(725, 206);
+            this.label4.Location = new System.Drawing.Point(535, 181);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 16);
@@ -223,21 +224,10 @@
             this.riciclabile.Text = "Si o No";
             this.riciclabile.UseVisualStyleBackColor = true;
             // 
-            // Visualizzazione
-            // 
-            this.Visualizzazione.Location = new System.Drawing.Point(252, 287);
-            this.Visualizzazione.Margin = new System.Windows.Forms.Padding(4);
-            this.Visualizzazione.Name = "Visualizzazione";
-            this.Visualizzazione.Size = new System.Drawing.Size(143, 53);
-            this.Visualizzazione.TabIndex = 18;
-            this.Visualizzazione.Text = "Visualizza";
-            this.Visualizzazione.UseVisualStyleBackColor = true;
-            this.Visualizzazione.Click += new System.EventHandler(this.Visualizzazione_Click);
-            // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(717, 287);
+            this.listView1.Location = new System.Drawing.Point(527, 262);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1064, 350);
@@ -280,7 +270,7 @@
             // 
             // Sconto
             // 
-            this.Sconto.Location = new System.Drawing.Point(432, 287);
+            this.Sconto.Location = new System.Drawing.Point(164, 316);
             this.Sconto.Margin = new System.Windows.Forms.Padding(4);
             this.Sconto.Name = "Sconto";
             this.Sconto.Size = new System.Drawing.Size(143, 53);
@@ -319,11 +309,35 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "NonAlimentare";
             // 
+            // ricerca
+            // 
+            this.ricerca.Location = new System.Drawing.Point(315, 316);
+            this.ricerca.Margin = new System.Windows.Forms.Padding(4);
+            this.ricerca.Name = "ricerca";
+            this.ricerca.Size = new System.Drawing.Size(143, 53);
+            this.ricerca.TabIndex = 27;
+            this.ricerca.Text = "Ricerca";
+            this.ricerca.UseVisualStyleBackColor = true;
+            this.ricerca.Click += new System.EventHandler(this.ricerca_Click);
+            // 
+            // sort
+            // 
+            this.sort.Location = new System.Drawing.Point(13, 377);
+            this.sort.Margin = new System.Windows.Forms.Padding(4);
+            this.sort.Name = "sort";
+            this.sort.Size = new System.Drawing.Size(143, 53);
+            this.sort.TabIndex = 28;
+            this.sort.Text = "Sort";
+            this.sort.UseVisualStyleBackColor = true;
+            this.sort.Click += new System.EventHandler(this.sort_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1806, 764);
+            this.ClientSize = new System.Drawing.Size(1751, 639);
+            this.Controls.Add(this.sort);
+            this.Controls.Add(this.ricerca);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -332,7 +346,6 @@
             this.Controls.Add(this.checkBoxNonAlimentare);
             this.Controls.Add(this.checkBoxAlimentare);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.Visualizzazione);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.riciclabile);
             this.Controls.Add(this.label5);
@@ -378,7 +391,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox riciclabile;
-        private System.Windows.Forms.Button Visualizzazione;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.CheckBox checkBoxAlimentare;
         private System.Windows.Forms.CheckBox checkBoxNonAlimentare;
@@ -387,6 +399,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button ricerca;
+        private System.Windows.Forms.Button sort;
     }
 }
 

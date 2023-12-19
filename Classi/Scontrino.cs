@@ -38,7 +38,7 @@ namespace Classi
             string[] temp = new string[100];
             for(int i = 0; i < indice; i++)
             {
-                temp[i] += $"- {Articolo[i].ToString()}";
+                temp[i] += $"{i+1}. {Articolo[i].ToString()}";
             }
             return temp;
         }
@@ -51,6 +51,36 @@ namespace Classi
                 totale += Articolo[i].Sconta(_cartaFedelta);
             }
             return totale;
+        }
+
+        public void BubbleSort()
+        {
+            for(int i = 0; i < indice; i++)
+            {
+                for (int j = 0; j < indice; j++)
+                {
+                    if (Articolo[j].PrezzoUnitario > Articolo[j + 1].PrezzoUnitario)
+                    {
+                        Articolo[indice + 1] = Articolo[j];
+                        Articolo[j] = Articolo[j + 1];
+                        Articolo[j + 1] = Articolo[indice + 1];
+                    }
+
+                }
+            }
+            Stringa();
+        }
+        public int Ricerca(string descrizione)
+        {
+            for(int i = 0; i < indice; i++)
+            {
+                if (Articolo[i].Descrizione == descrizione)
+                {
+                    return i+1;
+                    break;
+                }
+            }
+            return -1;
         }
     }
 }
